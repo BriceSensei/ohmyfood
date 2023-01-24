@@ -467,8 +467,37 @@ main #store .store-content .card .card-body p {
 }
 
 .menu-container .menu .menu-header i {
+  -webkit-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
   font-size: 1.5rem;
   margin-right: 1.75rem;
+}
+
+.menu-container .menu .menu-header i:hover {
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  font-weight: 600;
+  -webkit-animation: heart-in 1s forwards;
+          animation: heart-in 1s forwards;
+}
+
+@keyframes heart-in {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.menu-container .menu .menu-header i:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu-container .menu .menu-content {
@@ -588,10 +617,18 @@ main #store .store-content .card .card-body p {
 .menu-container .menu .menu-content .menu-content-cards .menu-content-card:hover .menu-check i {
   -webkit-animation: check-in 1s forwards;
           animation: check-in 1s forwards;
+  color: #99E2D0;
+}
+
+.menu-container .menu .menu-content .menu-content-cards .menu-content-card:hover .menu-check ::before {
+  padding: 0.25rem;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .menu-container .menu .menu-content .menu-content-cards .menu-content-card .menu-check {
   border-radius: 0 1.25rem 1.25rem 0;
+  background-color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,6 +716,14 @@ main #store .store-content .card .card-body p {
 }
 
 .menu-container .menu .button-container .menu-button {
+  padding: 1rem;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  border-radius: 2rem;
+  border: unset;
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
@@ -686,15 +731,13 @@ main #store .store-content .card .card-body p {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-container {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  .menu-container img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  img {
     height: 27rem;
   }
-  .menu-container .menu {
+  .menu {
     width: 100%;
     -ms-flex-item-align: center;
         align-self: center;
@@ -710,15 +753,15 @@ main #store .store-content .card .card-body p {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .menu-container .menu .menu-header {
+  .menu .menu-header {
     margin: 0 0 1rem .5rem;
   }
-  .menu-container .menu .menu-content-container {
+  .menu .menu-content-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .menu-container .menu .menu-content-container .menu-content {
+  .menu .menu-content-container .menu-content {
     -webkit-box-flex: 33%;
         -ms-flex: 33%;
             flex: 33%;
@@ -726,20 +769,20 @@ main #store .store-content .card .card-body p {
     padding: .5rem .5rem 1rem .5rem;
     margin: 0;
   }
-  .menu-container .menu .menu-content-container .menu-content h4 {
+  .menu .menu-content-container .menu-content h4 {
     margin-bottom: 1.5rem;
   }
-  .menu-container .menu .menu-content-container .menu-content .menu-content-cards {
+  .menu .menu-content-container .menu-content .menu-content-cards {
     gap: 1rem;
   }
-  .menu-container .menu .menu-content-container .menu-content .menu-content-cards .menu-content-card {
+  .menu .menu-content-container .menu-content .menu-content-cards .menu-content-card {
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .menu-container .menu {
+  .menu {
     width: 95%;
     padding: 3rem 1rem 4rem 1rem;
     -webkit-box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.15);
@@ -762,7 +805,7 @@ body {
   top: 0;
   left: 0;
   background-color: white;
-  z-index: 9999;
+  z-index: -10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,17 +857,21 @@ body {
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
+    z-index: 999;
   }
   to {
     opacity: 0;
+    z-index: -10;
   }
 }
 
 @keyframes fadeOut {
   from {
     opacity: 1;
+    z-index: 999;
   }
   to {
     opacity: 0;
+    z-index: -10;
   }
 }
