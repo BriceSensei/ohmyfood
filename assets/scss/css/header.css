@@ -96,12 +96,64 @@ header nav #search-container form input {
   header nav #search-container {
     background-color: #eaeaea;
     width: 100%;
-    padding: 1rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 30em;
+  }
+  header nav #search-container form {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 13px) {
+  #storeNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #storeNav i {
+    margin-right: 1em;
+  }
+  #storeNav .fa-arrow-left:before {
+    margin-left: -7em;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 701px) {
+  #storeNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  #storeNav i {
+    margin-right: 1em;
+  }
+  #storeNav .fa-arrow-left:before {
+    margin-left: -16em;
+  }
+}
+
+@media only screen and (max-width: 2000px) and (min-width: 1001px) {
+  #storeNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }

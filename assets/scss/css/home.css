@@ -119,6 +119,114 @@ header nav #search-container form input {
           justify-content: center;
 }
 
+@media only screen and (max-width: 500px) and (min-width: 10px) {
+  header nav {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .nav-brand {
+    padding: 1rem 0 0.5rem 0;
+    text-align-last: center;
+    width: 100%;
+    z-index: 1;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  }
+  header nav #search-container {
+    background-color: #eaeaea;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 30em;
+  }
+  header nav #search-container form {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 1550px) and (min-width: 1300px) {
+  nav img {
+    position: relative;
+    left: 35em;
+  }
+}
+
+@media only screen and (max-width: 1299px) and (min-width: 1230px) {
+  nav img {
+    position: relative;
+    left: 33em;
+  }
+}
+
+@media only screen and (max-width: 1229px) and (min-width: 1150px) {
+  nav img {
+    position: relative;
+    left: 29em;
+  }
+}
+
+@media only screen and (max-width: 1149px) and (min-width: 1140px) {
+  nav img {
+    position: relative;
+    left: 26em;
+  }
+}
+
+@media only screen and (max-width: 1139px) and (min-width: 900px) {
+  nav img {
+    position: relative;
+    left: 22.5em;
+  }
+}
+
+@media only screen and (max-width: 899px) and (min-width: 767px) {
+  nav img {
+    position: relative;
+    left: 17em;
+  }
+}
+
+@media only screen and (max-width: 766px) and (min-width: 660px) {
+  nav img {
+    position: relative;
+    left: 14em;
+  }
+}
+
+@media only screen and (max-width: 659px) and (min-width: 501px) {
+  nav img {
+    position: relative;
+    left: 8em;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 1px) {
+  nav img {
+    position: initial;
+    margin-right: 1em;
+  }
+  nav .nav-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  nav .nav-brand a {
+    margin-left: 1em;
+  }
+}
+
 .footer {
   color: #ffffff;
   background-color: #353535;
@@ -524,10 +632,13 @@ main #store .store-content .card .card-body p {
     color: #000000;
   }
   main .jumbotron .overlay #functioning {
-    padding: 0rem 1rem 1rem 1rem !important;
+    padding: 2rem 0rem 2rem 2.5rem !important;
     background-color: white;
     border-radius: 0rem !important;
     width: 100%;
+  }
+  main .jumbotron .overlay #functioning .functioning-content {
+    width: 93%;
   }
   main .jumbotron .overlay #functioning h3 {
     padding-bottom: 1.5rem;
